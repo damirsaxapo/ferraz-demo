@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008 180" fill="currentColor" role="img" aria-labelledby="ferraz-wordmark-title">
+  <title id="ferraz-wordmark-title">FERRAZ</title>
+  <desc>Custom six-letter FERRAZ wordmark. Wide forward-leaning outlines, precise chamfers, and open geometric counters.</desc>
+  <g data-letter="F" data-index="0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.63 25 L46.16 16 L169.16 16 L157.38 50 L67.38 50 L63.3 74 L143.3 74 L131.86 106 L57.86 106 L48 164 L12 164 Z"/>
+  </g>
+  <g data-letter="E" data-index="1">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M183.63 25 L194.16 16 L317.16 16 L305.38 50 L215.38 50 L211.3 74 L287.3 74 L275.86 106 L205.86 106 L201.78 130 L297.78 130 L286 164 L160 164 Z"/>
+  </g>
+  <g data-letter="R" data-index="2">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M333.63 25 L344.16 16 L451.16 16 L477.08 40 L469.26 86 L444.52 108 L423.52 108 L464 164 L418 164 L382.84 112 L354.84 112 L346 164 L310 164 Z M365.55 49 L432.55 49 L438.53 55 L435.3 74 L427.28 80 L360.28 80 Z"/>
+  </g>
+  <g data-letter="R" data-index="3">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M498.63 25 L509.16 16 L616.16 16 L642.08 40 L634.26 86 L609.52 108 L588.52 108 L629 164 L583 164 L547.84 112 L519.84 112 L511 164 L475 164 Z M530.55 49 L597.55 49 L603.53 55 L600.3 74 L592.28 80 L525.28 80 Z"/>
+  </g>
+  <g data-letter="A" data-index="4">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M721.16 16 L775.16 16 L803 164 L765 164 L759.44 132 L697.44 132 L681 164 L643 164 Z M732.21 51 L752.21 51 L761.71 101 L705.71 101 Z"/>
+  </g>
+  <g data-letter="Z" data-index="5">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M846.63 25 L857.16 16 L992.16 16 L986.89 47 L881.78 130 L972.78 130 L961 164 L823 164 L828.27 133 L933.38 50 L842.38 50 Z"/>
+  </g>
+</svg>
+
