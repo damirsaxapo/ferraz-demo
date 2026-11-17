@@ -1,0 +1,209 @@
+/* FERRAZ booking demo — all component styles are locally scoped. */
+html.ferraz-booking-is-open { overflow: hidden; }
+
+.ferraz-booking {
+  --fb-forest: #102c24;
+  --fb-ivory: #f1eedf;
+  --fb-acid: #d6ef68;
+  --fb-muted: #b9c1ad;
+  --fb-line: rgba(241, 238, 223, .22);
+  --fb-ease: cubic-bezier(.23, 1, .32, 1);
+  position: fixed;
+  inset: 0;
+  width: min(600px, calc(100% - 40px));
+  max-width: 600px;
+  max-height: 90vh;
+  max-height: 90dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--fb-line);
+  border-radius: 3px;
+  background: var(--fb-forest);
+  color: var(--fb-ivory);
+  box-shadow: 0 24px 90px #0005;
+  font-family: var(--body, Arial, sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px) scale(.985);
+  transition: opacity 250ms var(--fb-ease), transform 250ms var(--fb-ease);
+  color-scheme: dark;
+}
+
+.ferraz-booking[open] { display: flex; flex-direction: column; }
+.ferraz-booking.is-open { opacity: 1; transform: translateY(0) scale(1); }
+.ferraz-booking::backdrop { background: rgb(5 14 11 / 78%); }
+.ferraz-booking *, .ferraz-booking *::before, .ferraz-booking *::after { box-sizing: border-box; }
+.ferraz-booking [hidden] { display: none !important; }
+.ferraz-booking button { font: inherit; cursor: pointer; }
+.ferraz-booking button:disabled { cursor: not-allowed; }
+.ferraz-booking button:focus-visible,
+.ferraz-booking [tabindex="-1"]:focus-visible {
+  outline: 2px solid var(--fb-acid);
+  outline-offset: 4px;
+}
+.ferraz-booking [tabindex="-1"]:focus:not(:focus-visible) { outline: none; }
+
+.fb-header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 28px 24px 32px;
+  border-bottom: 1px solid var(--fb-line);
+}
+.fb-eyebrow { margin: 0 0 9px; color: var(--fb-acid); font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.fb-title, .fb-step-title {
+  margin: 0;
+  font-family: var(--display, 'Arial Narrow', Arial, sans-serif);
+  font-weight: 800;
+  font-stretch: condensed;
+  line-height: 1.04;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.fb-title { max-width: 380px; font-size: clamp(27px, 6vw, 40px); }
+.fb-close {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--fb-line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--fb-ivory);
+  transition: transform 250ms var(--fb-ease);
+}
+.fb-scroll { min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; padding: 24px 32px 28px; scrollbar-width: thin; scrollbar-color: #6b7963 var(--fb-forest); }
+.fb-demo-note { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 24px; color: var(--fb-muted); font-size: 12px; line-height: 1.6; }
+.fb-demo-marker { flex: 0 0 6px; width: 6px; height: 6px; margin-top: 7px; border-radius: 1px; background: var(--fb-acid); }
+.fb-progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 28px; padding: 0; list-style: none; }
+.fb-progress li { padding: 0 0 10px; border-bottom: 1px solid var(--fb-line); color: var(--fb-muted); font-size: 11px; letter-spacing: .03em; white-space: nowrap; }
+.fb-progress li span { margin-right: 5px; opacity: .65; font-variant-numeric: tabular-nums; }
+.fb-progress li[aria-current="step"] { color: var(--fb-acid); border-bottom: 2px solid var(--fb-acid); }
+.fb-progress li.is-done { color: var(--fb-ivory); border-color: var(--fb-ivory); }
+.fb-step-title { margin-bottom: 22px; font-size: clamp(25px, 5.5vw, 32px); }
+.fb-fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.fb-label { float: none; display: block; width: 100%; margin: 0 0 12px; padding: 0; color: var(--fb-muted); font-size: 10px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.fb-services { display: grid; gap: 9px; }
+.fb-choice { position: relative; display: block; min-width: 0; cursor: pointer; }
+.fb-choice input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.fb-choice-face {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 48px;
+  padding: 16px 18px;
+  border: 1px solid var(--fb-line);
+  border-radius: 3px;
+  color: var(--fb-ivory);
+  background: transparent;
+  transition: transform 250ms var(--fb-ease);
+}
+.fb-choice input:checked + .fb-choice-face { border-color: var(--fb-acid); background: rgb(214 239 104 / 8%); }
+.fb-choice input:focus-visible + .fb-choice-face { outline: 2px solid var(--fb-acid); outline-offset: 3px; }
+.fb-choice-label { font-size: 15px; font-weight: 500; line-height: 1.35; }
+.fb-choice-detail { display: block; margin-top: 4px; color: var(--fb-muted); font-size: 11px; line-height: 1.4; }
+.fb-service .fb-choice-face { min-height: 78px; padding-right: 48px; }
+.fb-service .fb-choice-face::after { content: ''; position: absolute; top: 50%; right: 19px; width: 14px; height: 14px; border: 1px solid #a7b197; border-radius: 50%; transform: translateY(-50%); }
+.fb-service input:checked + .fb-choice-face::after { border: 4px solid var(--fb-acid); }
+.fb-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.fb-day .fb-choice-face { min-height: 88px; align-items: center; padding: 10px 2px; }
+.fb-day .fb-choice-label { order: 2; font-size: 25px; font-variant-numeric: tabular-nums; }
+.fb-day .fb-choice-detail { order: 1; margin: 0 0 4px; font-size: 10px; text-transform: uppercase; }
+.fb-day-month { order: 3; color: var(--fb-muted); font-size: 9px; }
+.fb-time-fieldset { margin-top: 24px; }
+.fb-times { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.fb-time .fb-choice-face { align-items: center; min-height: 46px; padding: 10px 8px; font-variant-numeric: tabular-nums; }
+.fb-time .fb-choice-label { font-size: 14px; }
+.fb-time-fieldset:disabled .fb-choice { cursor: not-allowed; }
+.fb-time-fieldset:disabled .fb-choice-face { opacity: .35; }
+.fb-hint { margin: 17px 0 0; color: var(--fb-muted); font-size: 11px; line-height: 1.65; }
+.fb-review { margin: 0; border-top: 1px solid var(--fb-line); }
+.fb-review > div { display: grid; grid-template-columns: 1fr 1.5fr; align-items: baseline; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--fb-line); }
+.fb-review dt { color: var(--fb-muted); font-size: 12px; }
+.fb-review dd { margin: 0; font-size: 14px; text-align: right; }
+.fb-footer { flex: 0 0 auto; padding: 18px 32px 24px; border-top: 1px solid var(--fb-line); background: var(--fb-forest); }
+.fb-summary { margin: 0 0 14px; color: var(--fb-muted); font-size: 10px; line-height: 1.55; }
+.fb-actions { display: flex; gap: 10px; }
+.fb-button {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border: 1px solid var(--fb-line);
+  border-radius: 3px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  transition: transform 250ms var(--fb-ease), opacity 250ms var(--fb-ease);
+}
+.fb-button-next { flex: 1; justify-content: space-between; border-color: var(--fb-acid); color: var(--fb-forest); background: var(--fb-acid); }
+.fb-button-next:disabled { border-color: var(--fb-line); background: #2b4234; color: #99a48d; }
+.fb-button-back { flex: 0 0 auto; color: var(--fb-ivory); background: transparent; }
+.fb-next-arrow { margin-left: 6px; font-size: 20px; line-height: 1; }
+.fb-button:active:not(:disabled), .fb-close:active, .fb-choice:active:has(input:not(:disabled)) .fb-choice-face { transform: scale(.98); }
+.fb-complete-icon { display: grid; width: 58px; height: 58px; place-items: center; margin: 0 0 24px; border: 1px solid var(--fb-acid); border-radius: 3px; color: var(--fb-acid); }
+.fb-complete .fb-step-title { max-width: 420px; margin-top: 13px; }
+.fb-complete-note { margin: 20px 0 0; color: var(--fb-acid); font-size: 12px; }
+.fb-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.ferraz-booking.fb-no-motion, .ferraz-booking.fb-no-motion * { transition-duration: 0s !important; }
+
+@media (hover: hover) and (pointer: fine) {
+  .fb-close:hover, .fb-button-back:hover { background: rgb(241 238 223 / 7%); }
+  .fb-choice:hover:has(input:not(:disabled)) .fb-choice-face { border-color: var(--fb-acid); }
+  .fb-button-next:hover:not(:disabled) { background: #e0f68c; }
+}
+
+@media (max-width: 640px) {
+  .ferraz-booking { inset: auto 0 0; width: 100%; max-width: none; margin: 0; border-right: 0; border-bottom: 0; border-left: 0; border-radius: 3px 3px 0 0; transform: translateY(24px); }
+  .ferraz-booking.is-open { transform: translateY(0); }
+  .fb-header { gap: 12px; padding: 23px 18px 20px 22px; }
+  .fb-title { max-width: 280px; }
+  .fb-scroll { padding: 20px 22px 24px; }
+  .fb-demo-note { margin-bottom: 20px; font-size: 11px; }
+  .fb-progress { margin-bottom: 24px; }
+  .fb-footer { padding: 16px 22px calc(20px + env(safe-area-inset-bottom)); }
+  .fb-button { padding-inline: 14px; }
+  .fb-button-back { gap: 7px; }
+  .fb-review > div { grid-template-columns: 1fr 1.6fr; gap: 12px; }
+}
+
+@media (max-width: 420px) {
+  .fb-days { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .fb-day .fb-choice-face { min-height: 76px; }
+  .fb-header { padding-left: 18px; }
+  .fb-scroll, .fb-footer { padding-inline: 18px; }
+  .fb-button { font-size: 11px !important; padding-inline: 11px; }
+}
+
+body.motion-off .ferraz-booking,
+body.motion-off .ferraz-booking.is-open { transform: none; transition-duration: 0s; }
+body.motion-off .ferraz-booking * { transition-duration: 0s !important; }
+body.motion-off .fb-button:active:not(:disabled),
+body.motion-off .fb-close:active,
+body.motion-off .fb-choice:active:has(input:not(:disabled)) .fb-choice-face { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ferraz-booking, .ferraz-booking.is-open { transform: none; transition-duration: 0s; }
+  .ferraz-booking * { transition-duration: 0s !important; }
+  .fb-button:active:not(:disabled), .fb-close:active, .fb-choice:active:has(input:not(:disabled)) .fb-choice-face { transform: none; }
+}

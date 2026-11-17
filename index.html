@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102c24"><meta name="description" content="FERRAZ — барбершоп в Альметьевске. Свой стиль. Свой характер. Первый дизайн-концепт сайта.">
+  <title>FERRAZ — свой характер.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/oswald-700.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/hero.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="booking.css">
+  <script defer src="app.js"></script><script defer src="booking.js"></script>
+</head>
+<body>
+  <a class="skip" href="#about">К содержанию</a>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol id="arrow" viewBox="0 0 24 24"><path d="M4 20 20 4M4 4h16v16" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol><symbol id="spark" viewBox="0 0 80 80"><path d="m40 0 7 25 21-13-13 21 25 7-25 7 13 21-21-13-7 25-7-25-21 13 13-21L0 40l25-7-13-21 21 13Z" fill="currentColor"/></symbol></svg>
+  <header class="header" id="header">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <a class="logo" href="#home" aria-label="FERRAZ — на главную">FERRAZ<span>✳</span></a>
+    <span class="header-city"><i></i> АЛЬМЕТЬЕВСК</span>
+    <nav id="main-nav" aria-label="Основная навигация"><a href="#about">ХАРАКТЕР</a><a href="#services">УСЛУГИ</a><a href="#atmosphere">АТМОСФЕРА</a></nav>
+    <button class="header-book" data-book>ЗАПИСАТЬСЯ <svg><use href="#arrow"/></svg></button>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-meta"><span>МУЖСКАЯ ТЕРРИТОРИЯ</span><span>ALMETYEVSK / TATARSTAN</span><span>СВОЙ СТИЛЬ. СВОИ ПРАВИЛА.</span></div>
+        <h1 class="hero-word" id="hero-title" aria-label="FERRAZ"><span>F</span><span>E</span><span>R</span><span>R</span><span>A</span><span>Z</span><small>✳</small></h1>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="assets/hero.jpg" width="1672" height="941" alt="Концептуальный портрет команды барберов с клиентом" fetchpriority="high">
+          <div class="hero-shade"></div>
+          <span class="photo-coordinate">01 / THE FIRST CUT</span>
+          <div class="hero-caption"><p>БАРБЕРШОП FERRAZ</p><h2>ТВОЙ ХАРАКТЕР.<br><span>НАША РАБОТА.</span></h2></div>
+          <button class="round-book" data-book aria-label="Выбрать время — демонстрационная запись"><span>ТВОЁ<br>ВРЕМЯ</span><svg><use href="#arrow"/></svg></button>
+        </div>
+        <div class="hero-bottom"><a href="#about" class="scroll-link"><span class="scroll-line" aria-hidden="true"></span>ПРОКРУТИ. ПОЧУВСТВУЙ.</a><span>СТРИЖКИ / БОРОДА / СТИЛЬ</span><span class="concept-label">КОНЦЕПТ 01</span></div>
+      </div>
+    </section>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>СТИЛЬ НАЧИНАЕТСЯ С ТЕБЯ <svg><use href="#spark"/></svg> FERRAZ BARBERSHOP <svg><use href="#spark"/></svg> </span><span>СТИЛЬ НАЧИНАЕТСЯ С ТЕБЯ <svg><use href="#spark"/></svg> FERRAZ BARBERSHOP <svg><use href="#spark"/></svg> </span></div></div>
+    <section class="about section-light" id="about" aria-labelledby="about-title">
+      <div class="section-kicker"><span><b>01</b> / ХАРАКТЕР</span><span>ЧУВСТВОВАТЬ СЕБЯ СОБОЙ</span></div>
+      <div class="about-layout">
+        <div><h2 class="display about-title" id="about-title"><span class="line-reveal"><span>ХОРОШО</span></span><span class="line-reveal"><span>ВЫГЛЯДЕТЬ.</span></span><span class="line-reveal accent-line"><span>БЫТЬ СОБОЙ.</span></span></h2></div>
+        <div class="about-copy reveal"><svg class="about-spark spin-scroll" aria-hidden="true"><use href="#spark"/></svg><p class="lead">У каждого свой характер.<br>У каждой стрижки — твой.</p><p>FERRAZ — барбершоп в Альметьевске. Место, где можно выдохнуть, обсудить новый образ и уделить время себе.</p><a class="text-link" href="#services">НАЙТИ СВОЙ СТИЛЬ <svg><use href="#arrow"/></svg></a></div>
+      </div>
+      <div class="about-bottom"><span>НЕ ГНАТЬСЯ ЗА ТРЕНДАМИ.</span><span>ЗАДАВАТЬ СВОЙ РИТМ.</span><span class="tiny-star">✳</span></div>
+    </section>
+    <section class="ritual" aria-labelledby="ritual-title">
+      <div class="ritual-stage">
+        <div class="ritual-type" aria-hidden="true">CRAFT<br>& CHARACTER</div>
+        <div class="ritual-copy"><span class="eyebrow">02 / ВНИМАНИЕ К ДЕТАЛЯМ</span><h2 class="display" id="ritual-title"><span class="line-reveal"><span>НЕ ПРОСТО</span></span><span class="line-reveal"><span>СТРИЖКА.</span></span><span class="line-reveal lime"><span>ТВОЙ РИТУАЛ.</span></span></h2><p>От первого движения ножниц<br>до последнего штриха укладки.</p><div class="ritual-counter"><span id="ritual-progress">01</span><i></i><span>03</span></div></div>
+        <figure class="ritual-photo"><img src="assets/ritual.jpg" width="1086" height="1448" loading="lazy" alt="Концептуальный кадр: барбер прорабатывает форму стрижки"><figcaption>THE ART IS IN THE DETAILS.</figcaption></figure>
+        <div class="craft-stamp" aria-hidden="true"><svg viewBox="0 0 160 160"><defs><path id="circle-path" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/></defs><text><textPath href="#circle-path">FERRAZ • СВОЙ ХАРАКТЕР • FERRAZ • СВОЙ ХАРАКТЕР • </textPath></text><use href="#spark" x="56" y="56" width="48" height="48"/></svg></div>
+      </div>
+    </section>
+    <section class="services section-light" id="services" aria-labelledby="services-title">
+      <div class="section-kicker"><span><b>03</b> / УСЛУГИ</span><span>ВЫБИРАЙ, ЧТО НУЖНО ТЕБЕ</span></div>
+      <div class="services-heading"><h2 class="display line-reveal" id="services-title"><span>ПО ТВОИМ ПРАВИЛАМ.</span></h2><p>Форма. Детали. Законченность.<br>Собери свой визит в FERRAZ.</p></div>
+      <div class="service-list">
+        <button class="service-row reveal" data-book data-service="haircut"><span class="service-number">01</span><span class="service-name">МУЖСКАЯ СТРИЖКА<small>Форма, которая работает на тебя.</small></span><span class="service-category">ФОРМА / ТЕКСТУРА</span><span class="service-arrow"><svg><use href="#arrow"/></svg></span></button>
+        <button class="service-row reveal" data-book data-service="beard"><span class="service-number">02</span><span class="service-name">БОРОДА И КОНТУР<small>Характер — в точных линиях.</small></span><span class="service-category">ЛИНИИ / ДЕТАЛИ</span><span class="service-arrow"><svg><use href="#arrow"/></svg></span></button>
+        <button class="service-row reveal" data-book data-service="combo"><span class="service-number">03</span><span class="service-name">ПОЛНЫЙ ОБРАЗ<small>Стрижка и борода. Всё на своих местах.</small></span><span class="service-category">СТРИЖКА + БОРОДА</span><span class="service-arrow"><svg><use href="#arrow"/></svg></span></button>
+      </div>
+      <p class="services-note">В этой версии можно попробовать запись. Услуги и актуальный прайс уточним перед запуском.</p>
+    </section>
+    <section class="atmosphere" id="atmosphere" aria-labelledby="atmosphere-title">
+      <div class="gallery-stage">
+        <div class="gallery-heading"><div><span class="eyebrow">04 / ВНУТРИ FERRAZ</span><h2 class="display" id="atmosphere-title">У МЕСТА ЕСТЬ <span>ХАРАКТЕР.</span></h2></div><div class="gallery-count"><span id="gallery-current">01</span><span>/ 03</span><svg><use href="#arrow"/></svg></div></div>
+        <div class="gallery-window"><div class="gallery-track">
+          <figure class="gallery-card"><img src="assets/space.jpg" width="1672" height="941" loading="lazy" alt="Концепция интерьера: зелёные стены, кожаные кресла и тёплый свет"><figcaption><span>01 / МЕСТО</span><strong>СВОЯ АТМОСФЕРА.</strong></figcaption><span class="gallery-concept">КОНЦЕПТ-СЪЁМКА</span></figure>
+          <figure class="gallery-card portrait-card"><img src="assets/ritual.jpg" width="1086" height="1448" loading="lazy" alt="Концептуальная фотография деталей мужской стрижки"><figcaption><span>02 / ДЕТАЛИ</span><strong>НИЧЕГО СЛУЧАЙНОГО.</strong></figcaption><span class="gallery-concept">КОНЦЕПТ-СЪЁМКА</span></figure>
+          <figure class="gallery-card"><img src="assets/hero.jpg" width="1672" height="941" loading="lazy" alt="Концептуальная фотография команды барберов"><figcaption><span>03 / ЛЮДИ</span><strong>НА ОДНОЙ ВОЛНЕ.</strong></figcaption><span class="gallery-concept">КОНЦЕПТ-СЪЁМКА</span></figure>
+        </div></div>
+        <div class="gallery-footer"><span>ПРОДОЛЖАЙ ПРОКРУТКУ <span aria-hidden="true">↓</span></span><div class="gallery-progress"><i></i></div><span>МЕСТО. ДЕТАЛИ. ЛЮДИ.</span></div>
+      </div>
+    </section>
+    <section class="finale" id="visit" aria-labelledby="visit-title"><div class="section-kicker"><span><b>05</b> / ТВОЙ СЛЕДУЮЩИЙ ШАГ</span><span>АЛЬМЕТЬЕВСК, ТАТАРСТАН</span></div><div class="finale-content"><h2 class="display" id="visit-title"><span class="line-reveal"><span>УВИДИМСЯ</span></span><span class="line-reveal"><span>В КРЕСЛЕ<span class="lime">.</span></span></span></h2><div class="finale-action"><svg class="finale-spark spin-scroll" aria-hidden="true"><use href="#spark"/></svg><p>Новый образ начинается<br>с простого решения.</p><button class="button-primary" data-book>ВЫБРАТЬ ВРЕМЯ <svg><use href="#arrow"/></svg></button><span class="demo-hint">Демонстрация онлайн-записи</span></div></div></section>
+  </main>
+  <footer class="footer"><div class="footer-top"><a class="logo" href="#home">FERRAZ<span>✳</span></a><span>БАРБЕРШОП / АЛЬМЕТЬЕВСК</span><button class="motion-toggle" type="button" aria-pressed="true"><i></i><span>АНИМАЦИЯ ВКЛ.</span></button><a class="back-top" href="#home">НАВЕРХ ↑</a></div><div class="footer-word" aria-hidden="true">FERRAZ</div><div class="footer-bottom"><span>FERRAZ © <span id="year">2026</span></span><span>ДИЗАЙН-КОНЦЕПТ 01 · ФОТО И ЗАПИСЬ ДЕМОНСТРАЦИОННЫЕ</span><span>СВОЙ ХАРАКТЕР.</span></div></footer>
+  <div class="mobile-dock"><span>FERRAZ <small>АЛЬМЕТЬЕВСК</small></span><button data-book>ЗАПИСАТЬСЯ <svg><use href="#arrow"/></svg></button></div>
+  <noscript><div class="noscript-note">Для демонстрации записи включите JavaScript. Содержание сайта доступно ниже.</div></noscript>
+</body></html>
